@@ -1,5 +1,5 @@
 // EZBook.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// version 0.1.2
 # define _CRT_SECURE_NO_WARNINGS
 
 #include <stdlib.h>
@@ -9,6 +9,7 @@
 
 using namespace std;
 
+//struct for storing chosen date and number of rooms
 struct Date{
     int month;
     int day;
@@ -19,16 +20,16 @@ struct Date{
 }date;
 
 void roomPicker(int month, int day, int year);
+void DateChecker(int month, int day, int year);
 
 int main()
 {
     // data initialization 
+    int count1;
     char startDate[11];
-    time_t now = time(0);
-    tm* currDate = localtime(&now);
 
     //take in first user input
-    cout << "Version 0.1.1\n" << endl;
+    cout << "Version 0.1.2\n" << endl;
     cout << "\nWelcome to EZBook!\nPlease enter a beginning date in mm/dd/yyyy format: ";
     cin >> startDate;
 
@@ -42,7 +43,16 @@ int main()
     date.day = atoi(dayc);
     date.year = atoi(yearc);
 
-    //check for valid date
+    //check for valid date and runs rest of program if valid
+    dateChecker(date.month, date.day, date.year);
+
+    return 0;
+}
+
+void dateChecker(int, int, int){
+    time_t now = time(0);
+    tm* currDate = localtime(&now);
+
     if (date.year >= 1900 + currDate->tm_year) {
       
         if ((date.year == 1900 + currDate->tm_year && date.month >= 1 + currDate->tm_mon) || (date.year > 1900 + currDate->tm_year)) {
@@ -64,7 +74,7 @@ int main()
         cerr << "Error, this date has passed" << endl;
         return 1;
     }
-    return 0;
+
 }
 
 //meatball
