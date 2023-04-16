@@ -1,3 +1,6 @@
+  EZBook.EditEmail.resources - Embedded, ContainedInManifestFile, 
+  EZBook.EditName.resources - Embedded, ContainedInManifestFile, 
+  EZBook.Launch.resources - Embedded, ContainedInManifestFile, 
   EZBook.LoginForm.resources - Embedded, ContainedInManifestFile, 
   EZBook.MainForm.resources - Embedded, ContainedInManifestFile, 
   EZBook.RegisterForm.resources - Embedded, ContainedInManifestFile, 
@@ -27,15 +30,37 @@ Class User: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.String checkout : Public
     System.String roomtype : Public
     System.String password : Public
-Class EZBook.LoginForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class EZBook.EditEmail: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     User user : Public
+    Boolean switchToMain : Public
+Class EZBook.EditName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    User user : Public
+    Boolean switchToMain : Public
+Class EZBook.Launch: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
     Boolean switchToReservation : Public
-Class MyRestaurantProject.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Boolean switchToLogin : Public
+    User user : Public
+Class EZBook.LoginForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchToReservation : Public
+    User user : Public
+Class EZBook.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(User): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchToEditName : Public
+    Boolean switchToEditEmail : Public
 Class EZBook.RegisterForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

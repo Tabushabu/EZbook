@@ -123,12 +123,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EditEmail.cpp" />
+    <ClCompile Include="EditName.cpp" />
+    <ClCompile Include="Launch.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="RegisterForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EditEmail.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="EditName.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Launch.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -141,6 +153,15 @@
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EditEmail.resx">
+      <DependentUpon>EditEmail.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditName.resx">
+      <DependentUpon>EditName.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Launch.resx">
+      <DependentUpon>Launch.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
     </EmbeddedResource>

@@ -23,6 +23,7 @@ namespace EZBook {
 			//
 			//TODO: Add the constructor code here
 			//
+			this->CenterToScreen();
 		}
 
 	protected:
@@ -44,7 +45,7 @@ namespace EZBook {
 	private: System::Windows::Forms::TextBox^ tbPassword;
 	private: System::Windows::Forms::Button^ btnOK;
 	private: System::Windows::Forms::Button^ btnCancel;
-	private: System::Windows::Forms::LinkLabel^ llReservation;
+
 
 	private:
 		/// <summary>
@@ -66,7 +67,6 @@ namespace EZBook {
 			this->tbPassword = (gcnew System::Windows::Forms::TextBox());
 			this->btnOK = (gcnew System::Windows::Forms::Button());
 			this->btnCancel = (gcnew System::Windows::Forms::Button());
-			this->llReservation = (gcnew System::Windows::Forms::LinkLabel());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -75,7 +75,7 @@ namespace EZBook {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(12, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(557, 50);
+			this->label1->Size = System::Drawing::Size(557, 58);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Login";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -95,11 +95,12 @@ namespace EZBook {
 			this->tbEmail->Name = L"tbEmail";
 			this->tbEmail->Size = System::Drawing::Size(424, 38);
 			this->tbEmail->TabIndex = 2;
+			this->tbEmail->TextChanged += gcnew System::EventHandler(this, &LoginForm::tbEmail_TextChanged);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(19, 190);
+			this->label3->Location = System::Drawing::Point(1, 190);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(138, 32);
 			this->label3->TabIndex = 3;
@@ -133,24 +134,12 @@ namespace EZBook {
 			this->btnCancel->UseVisualStyleBackColor = true;
 			this->btnCancel->Click += gcnew System::EventHandler(this, &LoginForm::btnCancel_Click);
 			// 
-			// llReservation
-			// 
-			this->llReservation->AutoSize = true;
-			this->llReservation->Location = System::Drawing::Point(403, 339);
-			this->llReservation->Name = L"llReservation";
-			this->llReservation->Size = System::Drawing::Size(166, 32);
-			this->llReservation->TabIndex = 7;
-			this->llReservation->TabStop = true;
-			this->llReservation->Text = L"Reservation";
-			this->llReservation->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &LoginForm::llReservation_LinkClicked);
-			// 
 			// LoginForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(16, 31);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(581, 380);
-			this->Controls->Add(this->llReservation);
 			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->btnOK);
 			this->Controls->Add(this->tbPassword);
@@ -164,12 +153,17 @@ namespace EZBook {
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"LoginForm";
 			this->Text = L"Login Form";
+			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+
+	public: bool switchToReservation = false;
+
 	private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->switchToReservation = true;
 		this->Close();
 	}
 
@@ -222,11 +216,10 @@ namespace EZBook {
 	
 	}
 
-	public: bool switchToReservation = false;
 
-	private: System::Void llReservation_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-		this->switchToReservation = true;
-		this->Close();
-	}
+private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbEmail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
