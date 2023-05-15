@@ -1,0 +1,8 @@
+﻿  Program.cpp
+C:\Users\Farns\Desktop\EZbook\EZBook\LoginForm.h(212,21): warning C4101: 'e': unreferenced local variable
+C:\Users\Farns\Desktop\EZbook\EZBook\RegisterForm.h(372,21): warning C4101: 'ex': unreferenced local variable
+C:\Users\Farns\Desktop\EZbook\EZBook\EditName.h(154,21): warning C4101: 'e': unreferenced local variable
+C:\Users\Farns\Desktop\EZbook\EZBook\EditEmail.h(155,21): warning C4101: 'e': unreferenced local variable
+C:\Users\Farns\Desktop\EZbook\EZBook\Program.cpp(13,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  EditEmail.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  EZBook.vcxproj -> C:\Users\Farns\Desktop\EZbook\x64\Debug\EZBook.exe
