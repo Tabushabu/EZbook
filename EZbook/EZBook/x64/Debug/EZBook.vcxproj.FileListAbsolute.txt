@@ -1,0 +1,15 @@
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.vcxproj.AssemblyReference.cache
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.LoginForm.resources
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.MainForm.resources
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.RegisterForm.resources
+C:\Users\Farns\source\repos\EZbook\EZBook\x64\Debug\EZBook.vcxproj.GenerateResource.cache
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.vcxproj.AssemblyReference.cache
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.LoginForm.resources
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.MainForm.resources
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.RegisterForm.resources
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.vcxproj.GenerateResource.cache
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.Launch.resources
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.EditName.resources
+C:\Users\Farns\Desktop\EZbook\EZBook\x64\Debug\EZBook.EditEmail.resources
